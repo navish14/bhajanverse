@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+header img {
+    height: 40px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+}
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+}
+nav ul li:hover .dropdown {
+    display: block;
+}
+nav ul li .dropdown li {
+    margin: 0;
+}
+nav ul li .dropdown li a {
+    padding: 10px 20px;
+    color: #333;
+}
+nav ul li .dropdown li a:hover {
+    background-color: #e9ecef;
+}
+.container {
+    padding: 80px 20px 20px; /* Adjusted padding to account for fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.gallery-item {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+}
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+.gallery-item h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.gallery-item p {
+    font-size: 16px;
+    color: #666;
+}
+.gallery-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #04AA6D;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.gallery-item a:hover {
+    background-color: #039f5b;
+}
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}

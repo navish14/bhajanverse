@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+header img {
+    height: 50px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+}
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1001; /* Ensure dropdown is above other elements */
+}
+nav ul li:hover .dropdown {
+    display: block;
+}
+nav ul li .dropdown li {
+    margin: 0;
+}
+nav ul li .dropdown li a {
+    padding: 10px 20px;
+    color: #333;
+}
+nav ul li .dropdown li a:hover {
+    background-color: #e9ecef;
+}
+.container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.link-box {
+    position: relative;
+    width: 200px;
+    margin: 20px;
+    overflow: hidden;
+}
+.link-box img {
+    width: 100%;
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    transition: transform 0.3s ease;
+}
+.link-box .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.link-box:hover img {
+    transform: scale(1.1);
+}
+.link-box:hover .overlay {
+    opacity: 1;
+}
+
+#about, #contact {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+#about h2, #contact h2 {
+    text-align: center;
+}
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+#contact form label {
+    margin: 10px 0 5px;
+}
+#contact form input, #contact form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#contact form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #04AA6D;
+    color: white;
+    cursor: pointer;
+}
+#contact form button:hover {
+    background-color: #039f5b;
+}
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .lyrics {
+        align-items: flex-start;
+    }
+    .thumbnail, .heading {
+        align-self: center;
+        text-align: center;
+    }
+    .navigation-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
